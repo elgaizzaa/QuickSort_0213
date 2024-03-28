@@ -101,22 +101,25 @@ void display() {
     cout << "\n\nNumber of comparision: " << cmp_count << endl;
     cout << "number of data movements: " << mov_count << endl;
 }
- int main()
-{ 
-     char ch;
+int main()
+{
+    char ch;
 
-     do {
-         input();
-         q_short(0, n - 1);
-         display();
-         cout << "\n\nDp you want to continue? (y/n): ";
-         cin >> ch;
-         if (ch == 'n' || ch == 'n')
-             break;
+    do {
+        input();
+        q_short(0, n - 1);
+        display();
+        cout << "\n\nDp you want to continue? (y/n): ";
+        cin >> ch;
+        if (ch == 'n' || ch == 'n')
+            break;
 
-         system("pause");
-         system("cls");
+        system("pause");
+        system("cls");
 
-     } while (true);
+    } while (true);
+
+    return 0;
+}
     
 
