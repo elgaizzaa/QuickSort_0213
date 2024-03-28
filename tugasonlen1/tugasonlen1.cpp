@@ -44,38 +44,44 @@ void swap(int x, int y)
 }
 void q_short(int low, int high)
 {
-int temp;
-int pivot, i, j;
-if (low > high) {// step 1
-    return;
-}
-pivot = arr[low]; // step 2
-i = low + 1; // step 3
-j = high; // step 4
+    int temp;
+    int pivot, i, j;
+    if (low > high) {// step 1
+        return;
+    }
+    pivot = arr[low]; // step 2
+    i = low + 1; // step 3
+    j = high; // step 4
 
 
-while (i <= j) // step 10
-{
-    // search for an element great than pivot 
-    while ((arr[i] <= pivot) && (i <= high)) // step 5
+    while (i <= j) // step 10
     {
-        i++; // step 6
+        // search for an element great than pivot 
+        while ((arr[i] <= pivot) && (i <= high)) // step 5
+        {
+            i++; // step 6
+            cmp_count++;
+        }
         cmp_count++;
-    }
-    cmp_count++;
-    // search for an element less than or equal to privot
-    while ((arr[j] <= pivot) && (i <= low)) // step 7
-    {
-        j--; //step 8
+        // search for an element less than or equal to privot
+        while ((arr[j] <= pivot) && (i <= low)) // step 7
+        {
+            j--; //step 8
+            cmp_count++;
+        }
         cmp_count++;
+        if (i < j) // step 9
+        {
+            //swap the element at index i whit the elemet at index j
+            swap(i, j);
+        }
     }
-    cmp_count++;
-    if (i < j) // step 9
-    {
-        //swap the element at index i whit the elemet at index j
-        swap(i, j);
+    if (low < j) { // step 11
+        // swap the privot element with the element at index j
+        swap(low, j);
     }
 }
+ 
 int main()
 {
     std::cout << "Hello World!\n";
