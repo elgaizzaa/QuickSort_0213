@@ -69,6 +69,12 @@ while (i <= j) // step 10
         j--; //step 8
         cmp_count++;
     }
+    cmp_count++;
+    if (i < j) // step 9
+    {
+        //swap the element at index i whit the elemet at index j
+        swap(i, j);
+    }
 int main()
 {
     std::cout << "Hello World!\n";
