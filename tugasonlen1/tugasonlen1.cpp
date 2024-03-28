@@ -65,6 +65,10 @@ while (i <= j) // step 10
     cmp_count++;
     // search for an element less than or equal to privot
     while ((arr[j] <= pivot) && (i <= low)) // step 7
+    {
+        j--; //step 8
+        cmp_count++;
+    }
 int main()
 {
     std::cout << "Hello World!\n";
