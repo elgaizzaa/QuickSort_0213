@@ -53,6 +53,12 @@ pivot = arr[low]; // step 2
 i = low + 1; // step 3
 j = high; // step 4
 
+
+while (i <= j) // step 10
+{
+    // search for an element great than pivot 
+    while ((arr[i] <= pivot) && (i <= high)) // step 5
+    
 int main()
 {
     std::cout << "Hello World!\n";
