@@ -75,6 +75,7 @@ while (i <= j) // step 10
         //swap the element at index i whit the elemet at index j
         swap(i, j);
     }
+}
 int main()
 {
     std::cout << "Hello World!\n";
