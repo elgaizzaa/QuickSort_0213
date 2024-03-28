@@ -101,11 +101,8 @@ void display() {
     cout << "\n\nNumber of comparision: " << cmp_count << endl;
     cout << "number of data movements: " << mov_count << endl;
 }
-
-
- 
-int main()
-{
-    std::cout << "Hello World!\n";
-}
+ int main()
+{ 
+     char ch;
+    
 
